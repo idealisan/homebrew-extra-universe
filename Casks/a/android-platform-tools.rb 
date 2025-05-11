@@ -1,0 +1,41 @@
+cask "android-platform-tools" do
+  version "36.0.0"
+  sha256 :no_check
+
+  url "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip"
+  name "Android Platform Tools"
+  desc "Android SDK platform tools, including ADB and Fastboot"
+  homepage "https://developer.android.com/tools/releases/platform-tools"
+
+  depends_on macos: ">= :sierra"
+
+  binary "platform-tools/adb"
+  binary "platform-tools/fastboot"
+  binary "platform-tools/dmtracedump"
+  binary "platform-tools/etc1tool"
+  binary "platform-tools/hprof-conv"
+  binary "platform-tools/mke2fs"
+  binary "platform-tools/systrace"
+
+  postflight do
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/adb"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/fastboot"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/dmtracedump"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/etc1tool"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/hprof-conv"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/mke2fs"]
+    system_command "chmod", args: ["+x", "#{staged_path}/platform-tools/systrace"]
+    system_command "xattr", args: ["-cr", "#{staged_path}/platform-tools"]
+  end
+
+  zap trash: [
+    "~/Library/Android/sdk/platform-tools",
+    "~/.android",
+  ]
+
+  caveats <<~EOS
+    To use ADB or Fastboot, ensure your Android device is connected via USB and has USB debugging enabled.
+    To remove configuration files and caches after uninstalling, run:
+      brew zap android-platform-tools
+  EOS
+end
