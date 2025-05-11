@@ -11,23 +11,27 @@ cask "stash-nsfw" do
   depends_on formula: "ffmpeg"
 
   binary "stash-macos", target: "stash-nsfw"
+
+  postflight do
+    system_command "chmod", args: ["+x", "#{staged_path}/stash-macos"]
+    system_command "xattr", args: ["-cr", "#{staged_path}/stash-macos"]
+  end
+
   service do
     run [opt_bin/"stash-nsfw", "--config", "#{Dir.home}/.stash/config.yml"]
     keep_alive true
     working_dir Dir.home
-    log_path var/"log/stash-nsfw.log"
-    error_log_path var/"log/stash-nsfw.err"
-  end
-
-  postflight do
-    system_command "chmod", args: ["+x", "#{staged_path}/stash-macos"]
+    log_path "/usr/local/var/log/stash-nsfw.log"
+    error_log_path "/usr/local/var/log/stash-nsfw.err"
   end
 
   zap trash: [
-    "#{var}/log/stash-nsfw.err",
-    "#{var}/log/stash-nsfw.log",
     "~/.stash",
     "~/Library/Application Support/Stash",
+    "/usr/local/var/log/stash-nsfw.log",
+    "/usr/local/var/log/stash-nsfw.err",
+    "/opt/homebrew/var/log/stash-nsfw.log",
+    "/opt/homebrew/var/log/stash-nsfw.err",
   ]
 
   caveats <<~EOS
