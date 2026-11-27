@@ -64,6 +64,8 @@ login (macOS launchd) or boot (Linux systemd):
 | :--- | :--- | :--- | :--- |
 | `userpref-mcp` | `brew install userpref-mcp` | `brew services start userpref-mcp` | `http://127.0.0.1:8765/mcp` |
 
+`userpref-mcp-stdio` is the other variant: no HTTP listener and no service — your MCP client launches it and talks over stdin/stdout.
+
 ## 🌍 List
 
 > Software not found in this list can be viewed in the list below.
@@ -76,7 +78,7 @@ login (macOS launchd) or boot (Linux systemd):
 
 > Auto-generated from `Casks/` and `Formula/` — do not edit by hand.
 
-59 cask(s) and 4 formula(s). Install with `brew install --cask <token>` on macOS or `brew install <token>` on Linux.
+60 cask(s) and 5 formula(s). Install with `brew install --cask <token>` on macOS or `brew install <token>` on Linux.
 
 | Token | Version | Platform | Architecture | Description | Homepage |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -134,7 +136,8 @@ login (macOS launchd) or boot (Linux systemd):
 | `svstudio2-pro` | 2.0.7 | macOS | universal | AI-based singing voice synthesis software | [Synthesizer V Studio 2 Pro](https://dreamtonics.com/synthesizerv/) |
 | `tinkertool` | 10.2,eai5aujc1e2lo9jaq02v24eshl | macOS | universal | Gives you access to additional system preference settings | [TinkerTool](https://bresink.com/osx/TinkerTool.html) |
 | `tmexclude` | 0.2.2 | macOS | universal | Exclude undesired files (node_modules, target, etc) from your TimeMachine backup | [TimeMachine Exclude](https://github.com/PhotonQuantum/tmexclude) |
-| `userpref-mcp` | 0.3.0 | macOS | arm64 + x86_64 | MCP server providing a shared user preference store for AI agents | [UserPref MCP Server](https://github.com/idealisan/user-preferences-mcp) |
+| `userpref-mcp` | 0.4.0 | macOS | arm64 + x86_64 | MCP server providing a shared user preference store for AI agents | [UserPref MCP Server](https://github.com/idealisan/user-preferences-mcp) |
+| `userpref-mcp-stdio` | 0.4.0 | macOS | arm64 + x86_64 | MCP stdio server providing a shared user preference store for AI agents | [UserPref MCP Server (stdio)](https://github.com/idealisan/user-preferences-mcp) |
 | `vibe` | 3.0.5 | macOS | arm64 + x86_64 | Transcribe on your own | [vibe](https://github.com/thewh1teagle/vibe/) |
 | `wox` | 2.0.0-beta.2 | macOS | arm64 + x86_64 | Cross-platform launcher that simply works | [Wox](https://github.com/Wox-launcher/Wox) |
 | `wpsoffice-en` | 8699 | macOS | arm64 + x86_64 | AI-Powered Office Suite for Everyone | [WPS Office](https://wps.com/) |
@@ -142,7 +145,8 @@ login (macOS launchd) or boot (Linux systemd):
 | `sun-ray` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Xray-core proxy client with a native GUI (Linux desktop build) | [sun-ray](https://github.com/idealisan/sun-ray/) |
 | `sun-ray-nogui` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Headless Xray-core proxy client (Linux servers, no user interface) | [sun-ray-nogui](https://github.com/idealisan/sun-ray/) |
 | `sun-ray-webui` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Xray-core proxy client with an embedded browser UI (Linux) | [sun-ray-webui](https://github.com/idealisan/sun-ray/) |
-| `userpref-mcp` | 0.3.0 | macOS + Linux | arm64 + x86_64 | MCP server providing a shared user preference store for AI agents | [userpref-mcp](https://github.com/idealisan/user-preferences-mcp) |
+| `userpref-mcp` | 0.4.0 | macOS + Linux | arm64 + x86_64 | MCP server providing a shared user preference store for AI agents | [userpref-mcp](https://github.com/idealisan/user-preferences-mcp) |
+| `userpref-mcp-stdio` | 0.4.0 | macOS + Linux | arm64 + x86_64 | MCP stdio server providing a shared user preference store for AI agents | [userpref-mcp-stdio](https://github.com/idealisan/user-preferences-mcp) |
 <!-- package-list:end -->
 
 ### Daily Use

@@ -1,9 +1,9 @@
 cask "userpref-mcp" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.3.0"
-  sha256 arm:   "c31be614e69f99b29e48416bed65b074312844268c7247ae539672af79c9ce2f",
-         intel: "af4d624fc82573f908da66229c2909e3251dae147ab3a3f7fa5b92074fe8b6"
+  version "0.4.0"
+  sha256 arm:   "1c6a14695a1903d256d4637da9ccffcb3ebb0aa629208168875851d406af8b54",
+         intel: "a13ea822bfd5530e79769d1d168da7c32d0480bbab93d5b6b5819b0a198df921"
 
   url "https://github.com/idealisan/user-preferences-mcp/releases/download/v#{version}/userpref-mcp_darwin_#{arch}",
       verified: "github.com/idealisan/user-preferences-mcp/"
