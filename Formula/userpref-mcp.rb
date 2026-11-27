@@ -1,29 +1,29 @@
 class UserprefMcp < Formula
   desc "MCP server providing a shared user preference store for AI agents"
   homepage "https://github.com/idealisan/user-preferences-mcp"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_arm do
       url "https://github.com/idealisan/user-preferences-mcp/releases/download/v#{version}/userpref-mcp_darwin_arm64"
-      sha256 "84499ce82e5ea938012324a1dd56bca58d5f129a0a3fe3823e162f63378b59e1"
+      sha256 "c31be614e69f99b29e48416bed65b074312844268c7247ae539672af79c9ce2f"
     end
 
     on_intel do
       url "https://github.com/idealisan/user-preferences-mcp/releases/download/v#{version}/userpref-mcp_darwin_amd64"
-      sha256 "2ac384e03ad13f38a98b9a083f866e5ec2a6c72982ce4ce1e11374127f985680"
+      sha256 "af4d624fc82573f908da66229c2909e3251dae147ab3a3f7fa5b92074fe8b6"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/idealisan/user-preferences-mcp/releases/download/v#{version}/userpref-mcp_linux_arm64"
-      sha256 "bfce7f7228a3eb0ef22bad1e49af361fa315c4481d67f8f90a460e7ec75fca55"
+      sha256 "ecb7093fe011244e90334b0452a6f25a5f9ebcfb0f802739a3b1b6989cba04fb"
     end
 
     on_intel do
       url "https://github.com/idealisan/user-preferences-mcp/releases/download/v#{version}/userpref-mcp_linux_amd64"
-      sha256 "134eb4171936610321679e896701f69f32907a7e5d4b2837a4f8f1767d572976"
+      sha256 "f246a5f7723351bd954e2cf6c40bb366adfd33cdb5b1d2c25017599ad59ee908"
     end
   end
 
