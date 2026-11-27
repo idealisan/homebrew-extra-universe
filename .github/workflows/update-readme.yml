@@ -1,0 +1,37 @@
+name: update-readme
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Casks/**"
+      - "Formula/**"
+      - ".github/scripts/update_readme.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: true
+
+jobs:
+  update:
+    name: Regenerate package list
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate README package list
+        run: python3 .github/scripts/update_readme.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update README package list"
+          file_pattern: README.md
