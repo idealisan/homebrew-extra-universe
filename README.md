@@ -78,7 +78,7 @@ login (macOS launchd) or boot (Linux systemd):
 
 > Auto-generated from `Casks/` and `Formula/` — do not edit by hand.
 
-60 cask(s) and 5 formula(s). Install with `brew install --cask <token>` on macOS or `brew install <token>` on Linux.
+60 cask(s) and 6 formula(s). Install with `brew install --cask <token>` on macOS or `brew install <token>` on Linux.
 
 | Token | Version | Platform | Architecture | Description | Homepage |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -142,6 +142,7 @@ login (macOS launchd) or boot (Linux systemd):
 | `wox` | 2.0.0-beta.2 | macOS | arm64 + x86_64 | Cross-platform launcher that simply works | [Wox](https://github.com/Wox-launcher/Wox) |
 | `wpsoffice-en` | 8699 | macOS | arm64 + x86_64 | AI-Powered Office Suite for Everyone | [WPS Office](https://wps.com/) |
 | `zulu-jdk11` | 11.0.27,11.80.21 | macOS | universal | OpenJDK distribution from Azul Systems | [Azul Zulu JDK 11](https://www.azul.com/downloads/) |
+| `opencode-lark` | 0.5.0 | Linux | universal | Feishu/Lark bridge for local OpenCode sessions | [opencode-lark](https://github.com/idealisan/opencode-lark) |
 | `sun-ray` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Xray-core proxy client with a native GUI (Linux desktop build) | [sun-ray](https://github.com/idealisan/sun-ray/) |
 | `sun-ray-nogui` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Headless Xray-core proxy client (Linux servers, no user interface) | [sun-ray-nogui](https://github.com/idealisan/sun-ray/) |
 | `sun-ray-webui` | 0.20.21 | macOS + Linux | arm64 + x86_64 | Xray-core proxy client with an embedded browser UI (Linux) | [sun-ray-webui](https://github.com/idealisan/sun-ray/) |
