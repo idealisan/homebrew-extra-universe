@@ -27,6 +27,7 @@ class SunRay < Formula
   def install
     on_macos do
       prefix.install Dir["Sun Ray.app"]
+      bin.mkpath
       (bin/"sun-ray").write <<~SH
         #!/bin/sh
         exec open "#{prefix}/Sun Ray.app" "$@"
@@ -35,7 +36,7 @@ class SunRay < Formula
     end
 
     on_linux do
-      cp cached_download, bin/"sun-ray"
+      bin.install cached_download => "sun-ray"
       chmod 0755, bin/"sun-ray"
     end
   end

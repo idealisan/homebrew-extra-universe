@@ -28,7 +28,7 @@ class UserprefMcp < Formula
   end
 
   def install
-    cp cached_download, bin/"userpref-mcp"
+    bin.install cached_download => "userpref-mcp"
     chmod 0755, bin/"userpref-mcp"
   end
 

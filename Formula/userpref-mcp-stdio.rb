@@ -28,7 +28,7 @@ class UserprefMcpStdio < Formula
   end
 
   def install
-    cp cached_download, bin/"userpref-mcp-stdio"
+    bin.install cached_download => "userpref-mcp-stdio"
     chmod 0755, bin/"userpref-mcp-stdio"
   end
 

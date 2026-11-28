@@ -24,6 +24,7 @@ class SunRayWebui < Formula
 
   def install
     on_macos do
+      bin.mkpath
       (bin/"sun-ray-webui").write <<~SH
         #!/bin/sh
         echo "sun-ray-webui is Linux-only. On macOS use: brew install --cask sun-ray" >&2
@@ -33,7 +34,7 @@ class SunRayWebui < Formula
     end
 
     on_linux do
-      cp cached_download, bin/"sun-ray-webui"
+      bin.install cached_download => "sun-ray-webui"
       chmod 0755, bin/"sun-ray-webui"
     end
   end

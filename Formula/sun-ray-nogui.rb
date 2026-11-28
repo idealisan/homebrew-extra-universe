@@ -24,6 +24,7 @@ class SunRayNogui < Formula
 
   def install
     on_macos do
+      bin.mkpath
       (bin/"sun-ray-nogui").write <<~SH
         #!/bin/sh
         echo "sun-ray-nogui is Linux-only. On macOS use: brew install --cask sun-ray" >&2
@@ -34,7 +35,7 @@ class SunRayNogui < Formula
 
     on_linux do
       # Reads the same sunray.json as the GUI build; logs go to stdout.
-      cp cached_download, bin/"sun-ray-nogui"
+      bin.install cached_download => "sun-ray-nogui"
       chmod 0755, bin/"sun-ray-nogui"
     end
   end
