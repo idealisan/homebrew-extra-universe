@@ -1,12 +1,12 @@
 class OpencodeLark < Formula
   desc "Feishu/Lark bridge for local OpenCode sessions"
   homepage "https://github.com/idealisan/opencode-lark"
-  version "0.5.0"
+  version "0.5.1"
 
-  # Our fork adds OpenCode v2 Basic auth and Lark international domain support.
-  # Pinned to a commit because the fork has no GitHub Release assets.
-  url "https://github.com/idealisan/opencode-lark/archive/b294879a6f78989345cc0e745036d528465ae0cb.tar.gz"
-  sha256 "e527f5258db19f84f726f76127fd5c44e83b7ce83c38c98e1b39b19955909a91"
+  # Our fork adds OpenCode v2 Basic auth, Lark international domain support,
+  # and local-timezone log timestamps. Pinned to the v0.5.1 release commit.
+  url "https://github.com/idealisan/opencode-lark/archive/869eec74c4b333dc070e6f38889ca468e3eddb5c.tar.gz"
+  sha256 "db9c5f6d621fb0f999fd286d2682c7814e5f52937bb895178740e4f1a69b89cd"
 
   depends_on "bun"
 
